@@ -6,5 +6,6 @@
              x:Class="CalcFreelancer.HomePage">
   <!--Pages can be added as references or inline-->
     <local:CalculoValorHoraPage/>
-    
+    <local:ProjetoPage/>
+
 </TabbedPage>
