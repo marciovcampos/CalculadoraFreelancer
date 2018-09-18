@@ -30,8 +30,7 @@
                    Keyboard="Numeric">
             </Entry>
 
-            <Label Text="{Binding ValorDaHora, StringFormat='{0:C} / hora'}"
-                   x:Name="ValorDaHora"
+            <Label Text="{Binding ValorDaHora, StringFormat='{0:C} / hora'}"                   
                    FontSize="Large"
                    TextColor="Green" />
 

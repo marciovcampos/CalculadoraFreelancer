@@ -1,4 +1,5 @@
 ﻿using CalcFreelancer.Repository;
+using CalcFreelancer.Services;
 using CalcFreelancer.ViewModels.Base;
 using System;
 using System.Collections.Generic;
@@ -71,11 +72,13 @@ namespace CalcFreelancer.ViewModels
         public Command GravarCommand { get; }
         public Command LimparCommand { get; }
 
+        private readonly ProjetoService ProjetoService;
 
         public ProjetoPageViewModel()
         {
             GravarCommand = new Command(ExecuteGravarCommand);
             LimparCommand = new Command(ExecuteLimparCommand);
+            ProjetoService = new ProjetoService();
         }
 
         private void ExecuteLimparCommand()
@@ -89,14 +92,13 @@ namespace CalcFreelancer.ViewModels
         {
             var projetoAzureClient = new AzureProjetoRepository();
 
-            projetoAzureClient.Insert(new Models.Projeto()
+            ProjetoService.Inserir(new Models.Projeto()
             {
                 ValorPorHora = ValorPorHora,
                 HorasPorDia = HorasPorDia,
                 DiasDuracaoProjeto = DiasDuracaoProjeto,
                 ValorTotal = ValorTotal
-            });
-
+            });                       
 
             ExecuteLimparCommand();
 

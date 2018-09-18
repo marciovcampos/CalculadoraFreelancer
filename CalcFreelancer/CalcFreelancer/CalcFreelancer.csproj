@@ -10,13 +10,18 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="CalculoValorHoraPage.xaml">
+    <ProjectReference Include="..\CalcFreelancer.Domain\CalcFreelancer.Domain.csproj" />
+    <ProjectReference Include="..\CalcFreelancer.Infra.Data\CalcFreelancer.Infra.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\CalculoValorHoraPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="HomePage.xaml">
+    <EmbeddedResource Update="Views\HomePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="ProjetoPage.xaml">
+    <EmbeddedResource Update="Views\ProjetoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

@@ -26,7 +26,8 @@
                    Text="{Binding DiasDuracaoProjeto}" />
 
             <Label FontSize="Large"
-                    Text="{Binding ValorTotal, StringFormat='{0:C}'}" />
+                   TextColor="Green"
+                    Text="{Binding ValorTotal, StringFormat='{0:C} / projeto'}" />
 
             <Grid>
                 <Grid.ColumnDefinitions>
