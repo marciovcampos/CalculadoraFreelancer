@@ -8,29 +8,29 @@
         <StackLayout>
             <Label Text="Valor ganho por mês" />
             <Entry Placeholder="Valor ganho por mês"
-                   x:Name="ValorGanhoMes"
+                   Text="{Binding ValorGanhoMes}"
                    Keyboard="Numeric">                
             </Entry>
 
             <Label Text="Horas trabalhadas por dia" />
             <Entry Placeholder="Horas trabalhadas por dia"
-                   x:Name="HorasTrabalhadasPorDia"
+                   Text="{Binding HorasTrabalhadasPorDia}"
                    Keyboard="Numeric">
             </Entry>
 
             <Label Text="Dias trabalhados por mês" />
             <Entry Placeholder="Dias trabalhados por mês"
-                   x:Name="DiasTrabalhadosPorMes"
+                   Text="{Binding DiasTrabalhadosPorMes}"
                    Keyboard="Numeric">
             </Entry>
 
             <Label Text="Dias de férias por ano" />
             <Entry Placeholder="Dias de férias por ano"
-                   x:Name="DiasFeriasPorAno"
+                   Text="{Binding DiasFeriasPorAno}"
                    Keyboard="Numeric">
             </Entry>
 
-            <Label Text="R$ 00,00 / hora"
+            <Label Text="{Binding ValorDaHora, StringFormat='{0:C} / hora'}"
                    x:Name="ValorDaHora"
                    FontSize="Large"
                    TextColor="Green" />
@@ -38,7 +38,7 @@
             <Button Text="Gravar"
                     BackgroundColor="#6699ff"
                     TextColor="White"
-                    x:Name="CalcularValorHoraButton" />
+                    Command="{Binding GravarCommand}" />
 
         </StackLayout>
     </ContentPage.Content>
