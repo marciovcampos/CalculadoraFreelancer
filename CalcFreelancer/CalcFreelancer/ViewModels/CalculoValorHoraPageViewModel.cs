@@ -2,6 +2,7 @@
 using CalcFreelancer.Repository;
 using CalcFreelancer.Services;
 using CalcFreelancer.ViewModels.Base;
+using CalcFreelancer.Views;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -110,7 +111,8 @@ namespace CalcFreelancer.ViewModels
 
             ProfissionalService.Inserir(Profissional);
 
-            await App.Current.MainPage.DisplayAlert("Sucesso", "Valor por hora gravado!", "Ok");
+            //await App.Current.MainPage.DisplayAlert("Sucesso", "Valor por hora gravado!", "Ok");
+            await App.Current.MainPage.Navigation.PushAsync(new CalculoValorHoraSucessoPage());
         }
 
     }
