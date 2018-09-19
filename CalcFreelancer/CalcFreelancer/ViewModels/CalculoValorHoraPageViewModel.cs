@@ -74,7 +74,7 @@ namespace CalcFreelancer.ViewModels
             }
         }
 
-        public ProfissionalService ProfissionalService { get; }
+        private readonly ProfissionalService ProfissionalService;
 
         private void CalcularValorHora()
         {
