@@ -3,6 +3,7 @@ using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CalcFreelancer.Models
 {
@@ -13,6 +14,7 @@ namespace CalcFreelancer.Models
         public double ValorPorHora { get; set; }
         public int HorasPorDia { get; set; }
         public int DiasDuracaoProjeto { get; set; }
-        public double ValorTotal { get; set; }       
+        public double ValorTotal { get; set; }
+
     }
 }

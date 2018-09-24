@@ -1,4 +1,7 @@
+using CommonServiceLocator;
 using System;
+using Unity;
+using Unity.ServiceLocation;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +14,11 @@ namespace CalcFreelancer
 		{
 			InitializeComponent();
 
-			MainPage = new NavigationPage(new HomePage());
+            var unityContainer = new UnityContainer();
+
+            ServiceLocator.SetLocatorProvider(() => new UnityServiceLocator(unityContainer));
+
+            MainPage = new NavigationPage(new HomePage());
         }
 
 		protected override void OnStart ()

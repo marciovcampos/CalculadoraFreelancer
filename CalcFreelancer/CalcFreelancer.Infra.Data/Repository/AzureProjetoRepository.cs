@@ -3,6 +3,7 @@ using Microsoft.WindowsAzure.MobileServices;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace CalcFreelancer.Repository
 {
@@ -21,6 +22,19 @@ namespace CalcFreelancer.Repository
         public async void Insert(Projeto projeto)
         {
             await Table.InsertAsync(projeto);
+        }
+
+        public async Task<IEnumerable<Projeto>> GetAll()
+        {
+            var empty = new Projeto[0];
+            try
+            {
+                return await Table.ToEnumerableAsync();
+            }
+            catch (Exception)
+            {
+                return empty;
+            }
         }
     }
 }
